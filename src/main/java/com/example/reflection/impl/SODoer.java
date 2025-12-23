@@ -1,4 +1,12 @@
 package com.example.reflection.impl;
 
-public class SODoer {
+import com.example.reflection.interfaces.SomeOtherInterface;
+
+public class SODoer implements SomeOtherInterface
+{
+    @Override
+    public void doSomeOther()
+    {
+        System.out.print("C");
+    }
 }

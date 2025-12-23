@@ -1,4 +1,6 @@
 package com.example.reflection.interfaces;
 
-public class SomeInterface {
+public interface SomeInterface
+{
+    void doSomething();
 }
