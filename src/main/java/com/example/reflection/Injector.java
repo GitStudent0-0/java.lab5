@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.Properties;
-
+/**
+ * Читает настройки из config.properties и
+ * подставляет реализации в поля с @AutoInjectable.
+ */
 public class Injector
 {
 
@@ -29,7 +32,14 @@ public class Injector
             ex.printStackTrace();
         }
     }
-
+    /**
+     * Находит помеченные поля и создаёт для них объекты
+     * указанных в config.properties классов.
+     *
+     * @param object объект, в который нужно внедрить зависимости
+     * @param <T> тип объекта
+     * @return тот же объект с заполненными полями
+     */
     public <T> T inject(T object)
     {
         Class<?> clazz = object.getClass();

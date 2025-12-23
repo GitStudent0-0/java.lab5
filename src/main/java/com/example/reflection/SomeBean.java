@@ -2,7 +2,10 @@ package com.example.reflection;
 
 import com.example.reflection.interfaces.SomeInterface;
 import com.example.reflection.interfaces.SomeOtherInterface;
-
+/**
+ * Класс, в который внедряются две зависимости
+ * и вызываются их методы.
+ */
 public class SomeBean
 {
 
